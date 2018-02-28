@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import { getWeather } from './services/weather';
+import CurrentWeather from './CurrentWeather';
+
 class App extends Component {
   constructor(){
     super();
