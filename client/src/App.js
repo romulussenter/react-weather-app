@@ -11,7 +11,7 @@ class App extends Component {
     this.state={
     lat:0,
     lon:0,
-    currentWeather: {},
+    currentWeather: [],
     error: null,
     };
   
@@ -40,9 +40,11 @@ handleLon(e){
     getWeather(this.state.lat, this.state.lon)
     .then(response => {
       const currentWeather = response.data.currently;
+      console.log(currentWeather);
       this.setState({
         currentWeather: currentWeather
       });
+      console.log(currentWeather);
     })
     .catch(error =>{
       console.log(error);
@@ -55,6 +57,14 @@ handleLon(e){
   
 
   render() {
+    const currentWeather =this.state.currentWeather;
+    const currentWeatherMap = 
+  <CurrentWeather
+  time = {currentWeather.time}
+  summary ={currentWeather.summary}
+  icon = {currentWeather.icon}
+  temperature = {currentWeather.temperature} /> 
+
     return (
   <div>
    <h1>Updated Weather App</h1>
@@ -85,7 +95,10 @@ handleLon(e){
        
        
        
-       <button>Submit Here</button>
+       <button onClick={this.buttonSubmit}>Submit Here</button>
+       {isBlankObject(this.state.currentWeather) ? "" : currentWeatherMap}
+       <p><button onclick="geoFindMe()">Show my location</button></p>
+       <div id="out"></div>
       </form>
     </div>
 

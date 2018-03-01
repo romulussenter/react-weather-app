@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {convertTimestamp} from './utils'
+
 
 const CurrentWeather = prop => {
     return(
         <section>
             <ul>
-                <li>Time: {prop.time}</li>
+                <li>Time:{convertTimestamp(prop.time)}</li>
                 <li>Summary:{prop.summary}</li>
                 <li>Icon: {prop.image}</li>
                 <li>Temperature: {prop.temperature}</li>
