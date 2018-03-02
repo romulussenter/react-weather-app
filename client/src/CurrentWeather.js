@@ -8,10 +8,10 @@ const CurrentWeather = prop => {
     return(
         <section>
             <ul>
-                <li>Time:{convertTimestamp(prop.time)}</li>
-                <li>Summary:{prop.summary}</li>
-                <li>Icon: {prop.image}</li>
-                <li>Temperature: {prop.temperature}</li>
+            <li className='temp'>Temperature: {prop.temperature}</li> 
+                <li className='su'>Summary:{prop.summary}</li>
+                <li hidden >Icon: {prop.image}</li>
+                <li  className='tim'>Time:{convertTimestamp(prop.time)}</li>
                 
 
             </ul>

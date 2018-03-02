@@ -66,7 +66,7 @@ handleLon(e){
   temperature = {currentWeather.temperature} /> 
 
     return (
-  <div>
+  <div className='head'>
    <h1>Updated Weather App</h1>
       <p>You can search for the weather of your city.</p>
      <form onSubmit={(e) =>this.buttonSubmit(e)}> 

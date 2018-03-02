@@ -1,3 +1,32 @@
-bbdy{
-    color: burlywood;
+body{
+    background-color:  black;
+}
+
+.head{
+    color: white;
+    text-align: center;
+}
+
+.tim{
+    
+    font-size: 20px;   
+    color: white;
+    padding-bottom: 10px;
+    
+}
+
+.sum{
+    color: white;
+    font-style: italic;
+    font-size: 20px;   
+    color: white;
+    padding-bottom: 10px;
+}
+
+.temp {
+    color: white;
+    font-style: italic;
+    font-size: 20px;   
+    color: white;
+    padding-top: 10px;
 }
